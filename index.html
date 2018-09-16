@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InVisualize.io</title>
+    <script src="script.js" async></script>
+    <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+    <!--<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i,900,900i" type="text/css" media="all"> -->
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Righteous" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body background="HTN Background.jpg">
+    <header class="masthead">
+    <h1 font = "Righteous"> InVisualize.io</h1>
+    </header>
+    <main class="main">
+       
+            <p class="intro">A novel AI-powered investment scouting tool</p>
+            <div class="test-wrapper">
+                <input id="test-area" style="color:white" size="50px" type="text" placeholder="Image URL?">
+            </div>
+            
+          <div id="button">
+                <button id="build">InVisualize it!</button>
+          </div>
+
+            <h2 class='portfolio' style="font-family: 'Comfortaa', cursive; color:white">Your Portfolio:</h2>
+
+<table>
+  <tr>
+    <th>Stock Ticker</th>
+    <th>Price per Share</th>
+    <th>AI Recommendation</th>
+  </tr>
+  <tr  style="height: 60px;">
+    <td class="ticker1"></td>
+    <td class="price1"></td>
+    <td class="ai1"></td>
+  </tr>
+</table>
+
+<p class="summary"></p>
+    </main>
+</body>
+</html>
