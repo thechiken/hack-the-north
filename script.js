@@ -139,10 +139,21 @@ function calculate() {
 //Alpha Vantage Stuff
 
 	function getAlphaVantagedata() {
-        var url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + stock + '&interval=1min&apikey=' + apiKey[0];
-        requestFile(url, stock);   
-    }
+        	var url = 'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=' + stock + '&interval=1min&apikey=' + apiKey[0];
+        	requestFile(url, stock);   
+    	}
    
+	function MachineLearning() {
+		$.ajax({
+		type: "POST",
+		url: "~/reverse_pca.py",
+		data: { param: text}
+		}).done(function(o) {
+    		console.log(data);
+    		console.log(text);
+});	
+	}
+
 	function requestFile(url, stock) {
 		const xhr = new XMLHttpRequest();
 		xhr.open( 'GET', url, true );
